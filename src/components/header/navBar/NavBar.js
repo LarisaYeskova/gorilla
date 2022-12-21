@@ -1,9 +1,9 @@
 import { Button, Grid, Box, Link } from '@mui/material';
 
-export default function NavBar({ isOpen, closeModal, setIsOpen }) {
+export default function NavBar({ setIsOpen }) {
     return (
         <>
-            <Grid container>
+            <Grid container >
                 <Grid item xs={6} sx={{ display: 'flex', alignItems: 'center' }}>
                     <Box
                         sx={{
@@ -81,9 +81,7 @@ export default function NavBar({ isOpen, closeModal, setIsOpen }) {
                     </Box>
                     <Box>
                         <Button
-                            onClick={(prev) => (
-                                setIsOpen({ ...prev, signUp: true })
-                            )}
+                            onClick={(prev) => setIsOpen({ ...prev, signUp: true })}
                             sx={{
                                 backgroundImage: `url(https://celes.club/uploads/posts/2022-05/1653577268_73-celes-club-p-fon-dlya-saita-besshovnii-temnii-krasivie-75.jpg)`,
                                 textTransform: 'uppercase',
