@@ -2,7 +2,7 @@ export const styles = {
   modalContainer: {
     width: '100%',
     color: 'white',
-    backgroundImage: `url(https://celes.club/uploads/posts/2022-05/1653577268_73-celes-club-p-fon-dlya-saita-besshovnii-temnii-krasivie-75.jpg)`,
+    backgroundImage: `url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/8be0a0135123287.61e1e827b6245.jpg)`,
   },
   modalContainerOverflow: {
     overflowY: 'scroll',
@@ -34,11 +34,11 @@ export const styles = {
     lineHeight: '145%',
   },
   link: {
-    cursor: 'pointer',
     color: 'white',
-    textDecorationColor: 'white',
-    ':hover': { textDecorationColor: 'black' },
     marginLeft: '4px',
+    fontWeight: '400',
+    fontSize: '16px',
+    lineHeight: '145%',
   },
   authFormContainer: {
     display: 'flex',
@@ -79,22 +79,7 @@ export const styles = {
     color: 'white',
     marginBottom: '25px',
   },
-  textField: {
-    border: '1px solid white',
-    opacity: '70%',
-    input: {
-      borderRadius: '0px',
-      onclick: {
-        borderRadius: 'none',
-        border: '1px solid black',
-      },
-      color: 'white',
-      cursor: 'pointer',
-    },
-    textArea: {
-      color: 'white',
-    },
-  },
+
   textFieldSelect: {
     svg: {
       color: 'white',
@@ -110,8 +95,14 @@ export const styles = {
   },
   minWidth: {
     minWidth: '50%',
+    '@media screen and (max-width: 1000px)': {
+      maxWidth: '90%',
+    },
   },
   maxWidth: {
     maxWidth: '50%',
+    '@media screen and (max-width: 1000px)': {
+      maxWidth: '90%',
+    },
   },
 };

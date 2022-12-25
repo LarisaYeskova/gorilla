@@ -1,64 +1,52 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
+import Heart from '../../../assets/img/heart.svg';
+import Money from '../../../assets/img/money.svg';
+import Toon from '../../../assets/img/toonIcon.svg';
+import { styles } from '../infoCenter.styles';
 
 export default function InfoAuth({ setIsOpen }) {
-    return (
-        <>
-            <Grid container sx={{ textAlign: 'start', minHeight: '500px', padding: '40px 35px' }}>
-                <Grid
-                    item
-                    xs={12}
-                    sx={{
-                        paddingLeft: '55px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'space-between',
-                    }}
-                >
-                    <Box>
-                        <Typography
-                            sx={{
-                                fontSize: '40px',
-                                lineHeight: '59px',
-                                fontWeight: '400',
-                                color: '#0C0C0C',
-                            }}
-                        >
-                            Specialists in Dating <br />
-                            Monetization
-                        </Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex' }}>
-                        <Button
-                            fullWidth
-                            onClick={(prev) => setIsOpen({ ...prev, signUp: true })}
-                            sx={{
-                                backgroundImage: `url(https://celes.club/uploads/posts/2022-05/1653577268_73-celes-club-p-fon-dlya-saita-besshovnii-temnii-krasivie-75.jpg)`,
-                                color: 'white',
-                                borderRadius: '0px',
-                                minHeight: '140px',
-                                fontSize: '24px',
-                                lineHeight: '36px',
-                            }}
-                        >
-                            Sign Up
-                        </Button>
-                        <Button
-                            fullWidth
-                            onClick={(prev) => setIsOpen({ ...prev, signIn: true })}
-                            sx={{
-                                color: '#0C0C0C',
-                                borderRadius: '0px',
-                                border: '1px solid #0C0C0C',
-                                minHeight: '140px',
-                                fontSize: '24px',
-                                lineHeight: '36px',
-                            }}
-                        >
-                            Sign in
-                        </Button>
-                    </Box>
-                </Grid>
-            </Grid>
-        </>
-    );
+  return (
+    <>
+      <Grid container sx={[styles.infoContainer, styles.relative]}>
+        <Grid item xs={12} sx={styles.infoAuthItem}>
+          <Box>
+            <Typography variant="h2">
+              Specialists in Dating <br />
+              Monetization
+            </Typography>
+          </Box>
+          <Box sx={styles.ImgMediaBox}>
+            <Box sx={[styles.positionAbsolute, styles.infoHeart]}>
+              <img src={Heart} alt="Heart"></img>
+            </Box>
+            <Box sx={[styles.positionAbsolute, styles.infoMoney]}>
+              <img src={Money} alt="Money"></img>
+            </Box>
+            <Box sx={[styles.positionAbsolute, styles.infoToon]}>
+              <img src={Toon} alt="Toon"></img>
+            </Box>
+            <Box sx={[styles.positionAbsolute, styles.infoHeartDublicate]}>
+              <img src={Heart} alt="Heart"></img>
+            </Box>
+          </Box>
+          <Box sx={styles.flex}>
+            <Button
+              fullWidth
+              onClick={(prev) => setIsOpen({ ...prev, signUp: true })}
+              sx={styles.infoAuthButton}
+            >
+              Sign Up
+            </Button>
+            <Button
+              fullWidth
+              onClick={(prev) => setIsOpen({ ...prev, signIn: true })}
+              sx={styles.infoAuthButtonWhite}
+            >
+              Sign in
+            </Button>
+          </Box>
+        </Grid>
+      </Grid>
+    </>
+  );
 }
