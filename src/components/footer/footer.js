@@ -6,6 +6,14 @@ import Three from '../../assets/img/three.svg';
 import { styles } from './footer.styles';
 
 export default function Footer({ isOpen, closeModal, setIsOpen }) {
+  const handlerScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <>
       <Grid container sx={styles.footerContainer} columns={{ xs: 4, md: 12 }}>
@@ -30,7 +38,7 @@ export default function Footer({ isOpen, closeModal, setIsOpen }) {
               </Box>
             </Box>
             <Box>
-              <Link>BACK TO TOP ↑</Link>
+              <Link onClick={handlerScrollToTop}>BACK TO TOP ↑</Link>
             </Box>
             <Box sx={[styles.flex, styles.alignItemsCenter]}>
               <Box sx={styles.marginRight15px}>
